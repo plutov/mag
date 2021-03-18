@@ -9,8 +9,8 @@ Features:
 - failure threshold - if there are too many failures - stop checking the endpoint
 
 Example log output:
+
 ```
-docker-compose logs -f 
 time="2021-03-18T18:19:50Z" level=info msg="target is registered" endpoint="http://magnificent:12345"
 time="2021-03-18T18:19:50Z" level=info msg="target is registered" endpoint="http://httpbin.org/status/500"
 
@@ -40,7 +40,7 @@ Daemon can be configured using environment variables.
 targets.json example:
 
 ```json
-[[
+[
   {
     "endpoint": "http://magnificent:12345",
     "method": "GET",
