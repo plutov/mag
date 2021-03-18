@@ -1,0 +1,17 @@
+version: '3.5'
+
+services:
+    daemon:
+        build:
+            context: ./daemon
+        environment:
+            - LOG_LEVEL=debug
+            - TARGETS_CONFIG_FILE=./targets.json
+        volumes:
+            - $PWD:/daemon
+
+    magnificent:
+        build:
+            context: ./magnificent
+        ports:
+            - 12345:12345
